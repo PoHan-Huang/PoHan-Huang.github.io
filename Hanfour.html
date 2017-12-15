@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="author" content="黃柏漢">
+    <meta name="keywords" content="黃柏漢 Hanfour" />
+    <meta name="description" content="黃柏漢 個人網站" />
+    <meta name="copyright" CONTENT="本網頁著作權黃柏漢個人所有">
+    <meta name="robots" content="index,nofollow" />
+    <link rel="stylesheet" href="css/Universal.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <title>黃柏漢 Hanfour</title>
+    <style>
+    #clear {
+        clear: both;
+    }
+
+    body {
+        font-size: 16px;
+        line-height: 1.8em;
+        width: 100vw;
+        height: auto;
+        font-family: Microsoft JhengHei, PMingLiU, Helvetica Neue, Helvetica, Arial, sans-serif;
+        overflow-x: hidden;
+    }
+
+    nav {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        overflow-y: hidden;
+        background-color: #E43146;
+        top: 0;
+        left: 0;
+        z-index: 9;
+
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 20px 5px;
+    }
+
+    nav ul {
+        margin: 0 10px;
+    }
+
+    nav ul li {
+        float: right;
+        padding: 0px 40px;
+        font-size: 18px;
+        line-height: 60px;
+        cursor: pointer;
+        color: #fff;
+
+        transition: all .2s ease;
+        -webkit-transition: all.2s ease;
+        -moz-transition: all .2s ease;
+        -ms-transition: all .2s ease;
+        -o-transition: all .2s ease;
+    }
+
+    nav ul li:hover {
+        background-color: rgba( 0, 0, 0, .3);
+    }
+
+    nav .logo {
+        width: auto;
+        height: 80px;
+    }
+
+    nav .logo img {
+        width: auto;
+        height: 100%;
+    }
+
+    .fixed {
+        position: fixed;
+        top: 0;
+    }
+    /* header is Here↓ */
+
+    header {
+        width: 100%;
+        height: calc( 100vh - 60px);
+        position: relative;
+        top: 0px;
+        left: 0;
+        z-index: 1;
+
+        background-image: url('images/mistbg.jpg');
+        background-size: 1920px auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    header::before {
+        content: "";
+        width: 30vw;
+        height: calc( 100vh - 60px);
+        margin-left: 20px;
+        -webkit-transform: skew(-27deg);
+        -moz-transform: skew(-27deg);
+        -o-transform: skew(-27deg);
+        transform: skew(-27deg);
+        background-color: rgba(230, 48, 71, 0.6);
+        position: absolute;
+        z-index: 2;
+        right: 5vw;
+    }
+
+    header .content {
+        position: relative;
+        z-index: 2;
+        top: 0;
+        left: 0;
+    }
+
+    header .content .chief {
+        max-width: 610px;
+        width: 45%;
+        min-width: 330px;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 5%;
+        z-index: 3;
+        background-image: url('images/mySelf.png');
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        visibility: visible;
+        animation-duration: 1s;
+        animation-delay: 0.3s;
+        animation-name: fadeInLeft;
+    }
+
+    header .content .left {
+        width: 50%;
+        height: calc( 100vh - 60px);
+        display: block;
+        float: left;
+    }
+
+    header .content .right {
+        width: 50%;
+        height: calc( 100vh - 60px);
+        display: block;
+        float: left;
+
+        position: relative;
+    }
+
+    header .content .right .main {
+        width: 70%;
+        height: 400px;
+        display: block;
+        background-color: #fff;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 20px 5px;
+
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    header .content .right .main .top {
+        width: calc( 100% - 20px);
+        height: 320px;
+        border: 2px solid #E63047;
+        margin: 10px auto 0;
+    }
+
+    header .content .right .main .top .circle {
+        width: 180px;
+        height: 180px;
+        border-radius: 999rem;
+        margin: 30px auto 0;
+    }
+
+    header .content .right .main .top .circle img {
+        width: 100%;
+        height: auto;
+    }
+
+    header .content .right .main .top .top-text {
+        text-align: center;
+        line-height: 50px;
+        color: #282828;
+        font-size: 32px;
+        margin-top: 20px;
+    }
+
+    header .content .right .main .bottom {
+        width: calc( 100% - 20px);
+        height: 57px;
+        border: 2px solid #E63047;
+        margin: 0 auto 10px;
+        border-top: 0;
+        position: relative;
+    }
+
+    header .content .right .main .bottom .name {
+        width: 60%;
+        height: 57px;
+        margin: auto;
+        position: absolute;
+        top: -20px;
+        left: 0;
+        right: 0;
+
+        color: #fff;
+        font-size: 44px;
+    }
+
+    header .content .right .main .bottom .name .name-text {
+        width: 200px;
+        font-size: 32px;
+        line-height: 28px;
+        color: #fff;
+        margin: auto;
+        padding: 10px 20px;
+        background: #e43146;
+        border: 1px solid #fff;
+        box-shadow: 0 0 0 4px #e43146;
+        -webkit-box-shadow: 0 0 0 4px #e43146;
+        -moz-box-shadow: 0 0 0 4px #e43146;
+        -ms-box-shadow: 0 0 0 4px #e43146;
+    }
+    /* header is Here↑ */
+    /* main is Here↓ */
+
+    main {
+        width: 100vw;
+        height: auto;
+        position: relative;
+    }
+    /* ########## content-1 ########## */
+
+    #content-1 {
+        width: 100vw;
+        height: 800px;
+        position: relative;
+        background-color: #040E14;
+        margin-top: -100px;
+        padding-top: 100px;
+    }
+
+    #content-1::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 100px 100vw 0 0;
+        border-color: #040E14 transparent transparent transparent;
+        line-height: 0px;
+        _border-color: #040E14 #000000 #000000 #000000;
+        _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+        position: absolute;
+        bottom: -100px;
+        right: 0;
+        z-index: 5;
+    }
+
+    #content-1 .full {
+        height: 600px;
+        display: block;
+        padding-top: 200px;
+        padding-bottom: 100px;
+        overflow-y: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #content-1 .cover {
+        max-width: 1000px;
+        width: 100%;
+        height: 700px;
+        margin: auto;
+        display: inline;
+        float: left;
+
+        background-color: #040E14;
+    }
+
+    #content-1 .intro {
+        max-width: 1000px;
+        width: 100%;
+        height: 700px;
+        margin: auto;
+        display: inline;
+        float: left;
+    }
+
+    #content-1 .intro .title {
+        font-size: 32px;
+        margin-bottom: 60px;
+        color: #fff;
+        text-align: center;
+    }
+
+    #content-1 .intro .text {
+        margin: 0 20px;
+        font-size: 18px;
+        color: #fff;
+        line-height: 1.2em;
+    }
+
+    #content-1 .intro .like {
+        width: 100%;
+        height: 300px;
+        margin-top: 60px;
+    }
+
+    #content-1 .intro .like .box {
+        width: calc( (100% - 88px) / 4);
+        height: 260px;
+        display: block;
+        margin: 20px 10px;
+        border: 1px solid #2c2c2c;
+        float: left;
+        color: #e43146;
+        cursor: pointer;
+        visibility: visible;
+        animation-duration: 1s;
+        animation-delay: 0.3s;
+        transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+    }
+
+    #content-1 .intro .like .box:hover {
+        color: #fff;
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+    }
+
+    #content-1 .intro .like .box:hover {
+        background-color: #e43146;
+        color: #fff;
+    }
+
+    #content-1 .intro .like .box .top {
+        width: 100%;
+        height: 200px;
+        background-size: auto 150px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    #content-1 .intro .like .box-1 .top {
+        background-image: url('images/eat.svg');
+    }
+
+    #content-1 .intro .like .box-2 .top {
+        background-image: url('images/writer.svg');
+    }
+
+    #content-1 .intro .like .box-3 .top {
+        background-image: url('images/reading.svg');
+    }
+
+    #content-1 .intro .like .box-4 .top {
+        background-image: url('images/computer.svg');
+    }
+
+    #content-1 .intro .like .box .bottom {
+        width: 100%;
+        height: 60px;
+        font-size: 20px;
+        line-height: 60px;
+        text-align: center;
+        font-weight: 700;
+    }
+    /* ########## content-2 ########## */
+
+    #content-2 {
+        width: 100vw;
+        height: auto;
+        position: relative;
+        background-color: #fff;
+        padding-bottom: 60px;
+    }
+
+    #content-2::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 100px 100vw 0 0;
+        border-color: #fff transparent transparent transparent;
+        line-height: 0px;
+        _border-color: #fff #000000 #000000 #000000;
+        _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+        position: absolute;
+        bottom: -100px;
+        right: 0;
+        z-index: 5;
+    }
+
+    .Profile {
+        max-width: 1000px;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        padding-top: 200px;
+    }
+
+    .Profile .title {
+        font-size: 32px;
+        margin-bottom: 60px;
+        color: #040e14;
+        text-align: center;
+    }
+
+    .Profile .content {}
+
+    .Profile .content .title {
+        position: relative;
+        z-index: 1;
+        margin: auto;
+        width: 200px;
+        font-size: 28px;
+        line-height: 28px;
+        color: #fff;
+        padding: 10px 20px;
+        background: #e43146;
+        border: 1px solid #fff;
+        box-shadow: 0 0 0 4px #e43146;
+        -webkit-box-shadow: 0 0 0 4px #e43146;
+        -moz-box-shadow: 0 0 0 4px #e43146;
+        -ms-box-shadow: 0 0 0 4px #e43146;
+        -webkit-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+        -moz-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+        -ms-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    }
+
+    .Profile .content .title.circle::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        left: 50%;
+        margin-left: -5px;
+        background: #e43146;
+        position: absolute;
+        z-index: 2;
+        display: block;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        bottom: -8px;
+    }
+
+    .Profile .content .row {
+        width: calc( 50% - 41px);
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .Profile .content .row.left {
+        border-right: 1px solid #E63047;
+        float: left;
+        text-align: right;
+        position: relative;
+    }
+
+    .Profile .content .row.left .text {
+        position: absolute;
+        text-align: right;
+        width: auto;
+        right: 20px;
+        top: 60px;
+    }
+
+    .Profile .content .row.left .text .year {
+        display: inline-block;
+        position: relative;
+        margin-top: -4px;
+    }
+
+    .Profile .content .row.left .year span::after {
+        content: "";
+        position: absolute;
+        right: -5px;
+        top: 50%;
+        border-left: 6px solid #040e14;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+    }
+
+    .Profile .content .row.left .text .year span {
+        background-color: #040e14;
+        padding: 5px 15px;
+        font-family: 'Philosopher', sans-serif;
+        font-style: italic;
+        color: #fff;
+        position: relative;
+        display: block;
+    }
+
+    .Profile .content .row.circle::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        bottom: 0;
+        right: 0;
+        margin-right: -6px;
+        background: #e43146;
+        position: absolute;
+        z-index: 2;
+        display: block;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+    }
+
+    .Profile .content .row.right {
+        border-left: 1px solid #E63047;
+        float: right;
+        text-align: left;
+        position: relative;
+    }
+
+    .Profile .content .row.right .text {
+        position: absolute;
+        text-align: left;
+        width: auto;
+        left: 20px;
+        top: 60px;
+    }
+
+    .Profile .content .row.right .text h4 {
+        font-size: 24px;
+        color: #e43146;
+        margin-bottom: 10px;
+    }
+
+    .Profile .content .row.right .text h5 {
+        font-size: 14px;
+        font-weight: 400;
+        color: #040e14;
+        margin-bottom: 10px;
+    }
+    /* ########## content-3 ########## */
+
+    #content-3 {
+        width: 100vw;
+        height: auto;
+        position: relative;
+        background-color: #040E14;
+        padding-bottom: 60px;
+    }
+
+    #content-3::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 100px 100vw 0 0;
+        border-color: #040E14 transparent transparent transparent;
+        line-height: 0px;
+        _border-color: #040E14 #000000 #000000 #000000;
+        _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+        position: absolute;
+        bottom: -100px;
+        right: 0;
+        z-index: 5;
+    }
+
+    #content-3 .skills {
+        max-width: 1000px;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        padding-top: 200px;
+    }
+
+    #content-3 .skills .title {
+        font-size: 32px;
+        margin-bottom: 60px;
+        color: #fff;
+        text-align: center;
+    }
+
+    #content-3 .skills .col-50off {
+        width: calc( 25% - 10px);
+        float: left;
+    }
+
+    #content-3 .skills #load-line1 {
+        stroke: #0dbf2d;
+    }
+
+    #content-3 .skills #load-line2 {
+        stroke: #2196f3;
+    }
+
+    #content-3 .skills #load-line3 {
+        stroke: #e91e63;
+    }
+
+    #content-3 .skills #load-line4 {
+        stroke: #9c27b0;
+    }
+
+    #content-3 .skills .circle-wrapper {
+        display: block;
+        text-align: center;
+        margin: auto auto;
+        height: 100%;
+    }
+
+    #content-3 .skills .circle-wrapper .svg:nth-of-type(1) {
+        color: #0dbf2d;
+    }
+
+    #content-3 .skills .circle-wrapper .svg:nth-of-type(2) {
+        color: #2196f3;
+    }
+
+    #content-3 .skills .circle-wrapper .svg:nth-of-type(3) {
+        color: #e91e63;
+    }
+
+    #content-3 .skills .circle-wrapper .svg:nth-of-type(4) {
+        color: #9c27b0;
+    }
+
+    #content-3 .skills .circle-wrapper .svg {
+        border-radius: 5px;
+        padding: 5px;
+        margin: 10px 0;
+        position: relative;
+    }
+
+    #content-3 .skills .circle-wrapper .svg:hover svg {
+        cursor: pointer;
+        -webkit-transition: all 0.35s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+        transition: all 0.35s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        transform-type: preserve-3d;
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    #content-3 .skills .circle-wrapper .svg:after {
+        content: attr(data-lang);
+        position: absolute;
+        bottom: 20%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -100%);
+        transform: translate(-50%, -100%);
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        font-weight: bold;
+    }
+
+    #content-3 .skills .circle-wrapper .svg:before {
+        content: "" attr(data-value) "%";
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+        font-weight: bold;
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+        color: #fff;
+    }
+
+    #content-3 .skills .circle-wrapper svg path {
+        fill: none;
+    }
+
+    #content-3 .skills .circle-wrapper svg .load-circle {
+        stroke-width: 5px;
+        stroke-linecap: round;
+        -webkit-transition: stroke-dashoffset 3s ease-in-out;
+        transition: stroke-dashoffset 3s ease-in-out;
+        position: relative;
+    }
+
+    #content-3 .skills .circle-wrapper .load-bg {
+        stroke: #091F2D;
+        stroke-width: 5px;
+    }
+
+    @-webkit-keyframes load {
+        to {
+            stroke-dashoffset: 48;
+        }
+    }
+    /* ########## content-4 ########## */
+
+    #content-4 {
+        width: 100vw;
+        height: auto;
+        position: relative;
+        background-color: #fff;
+        padding-bottom: 60px;
+    }
+
+    #content-4::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 100px 100vw 0 0;
+        border-color: #fff transparent transparent transparent;
+        line-height: 0px;
+        _border-color: #fff #000000 #000000 #000000;
+        _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+        position: absolute;
+        bottom: -100px;
+        right: 0;
+        z-index: 5;
+    }
+
+    #content-4 .protfolio {
+        max-width: 1000px;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        padding-top: 200px;
+    }
+
+    #content-4 .protfolio .title {
+        font-size: 32px;
+        margin-bottom: 60px;
+        color: #040e14;
+        text-align: center;
+    }
+
+    #content-4 .protfolio .content {
+        margin: 0 20px;
+    }
+
+    #portfolio {
+        margin: 1rem 0;
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+        -webkit-column-gap: 1rem;
+        -moz-column-gap: 1rem;
+        column-gap: 1rem;
+        -webkit-column-width: 33.333333%;
+        -moz-column-width: 33.333333%;
+        column-width: 33.333333%;
+    }
+
+    .tile {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition: all 350ms ease;
+        transition: all 350ms ease;
+    }
+
+    .tile:hover {}
+
+    .scale-anm {
+        transform: scale(1);
+    }
+
+    .tile img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+        cursor: pointer;
+    }
+
+    .btn {
+        font-family: Lato;
+        font-size: 1rem;
+        font-weight: normal;
+        text-decoration: none;
+        cursor: pointer;
+        display: inline-block;
+        line-height: normal;
+        padding: .5rem 1rem;
+        margin: 0;
+        height: auto;
+        border: 1px solid;
+        vertical-align: middle;
+        -webkit-appearance: none;
+        color: #555;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .btn:hover {
+        text-decoration: none;
+    }
+
+    .btn:focus {
+        outline: none;
+        border-color: var(--darken-2);
+        box-shadow: 0 0 0 3px var(--darken-3);
+    }
+
+     ::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+
+
+    .lightbox-gallery {
+        /*display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;*/
+        justify-content: center;
+    }
+
+    .lightbox-gallery div>img {
+        max-width: 100%;
+        display: block;
+    }
+
+    .lightbox-gallery div {
+        margin: 10px;
+        flex-basis: 180px;
+    }
+
+    @media only screen and (max-width: 480px) {
+        .lightbox-gallery {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .lightbox>div {
+            margin-bottom: 10px;
+        }
+    }
+    /* Lighbox CSS */
+
+    .lightbox {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        padding-top: 30px;
+        box-sizing: border-box;
+    }
+
+    .lightbox img {
+        display: block;
+        margin: auto;
+        position: absolute;
+        top: calc( 25% - 30px);
+        left: 0;
+        right: 0;
+        max-height: calc( 100% - 40% - 30px);
+        -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, .8);
+        -moz-box-shadow: 0 0 30px rgba(0, 0, 0, .8);
+        box-shadow: 0 0 30px rgba(0, 0, 0, .8);
+    }
+
+    .lightbox .caption {
+        margin: 15px auto;
+        width: 50%;
+        text-align: center;
+        font-size: 1.5em;
+        line-height: 1.5;
+        font-weight: 700;
+        color: #eee;
+        position: absolute;
+        top: calc( 15% - 30px);
+        left: 0;
+        right: 0;
+    }
+
+    .github-link {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .github-link:hover,
+    .github-link:active,
+    .github-link:visited {
+        color: #fff;
+        text-decoration: none;
+    }
+    /* main is Here↑ */
+    /* footer is Here↓ */
+
+    footer {
+        width: 100vw;
+        height: 220px;
+        position: relative;
+        background-color: #040E14;
+    }
+
+    footer .my {
+        width: calc( 100% - 37px);
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: right;
+        padding-bottom: 37px;
+        margin-right: 37px;
+        color: #fff;
+    }
+
+    footer .my h2 {
+        height: 22px;
+        margin-top: 20px;
+    }
+
+    footer .my h2 a {
+        line-height: 22px;
+        font-size: 22px;
+        color: #fff;
+        padding-left: 27px;
+        position: relative;
+    }
+
+    footer .my h2 a::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 22px;
+        height: 30px;
+        background-image: url('images/email.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: auto 22px;
+        z-index: 999;
+    }
+    /* footer is Here↑ */
+    /* 768px > 1024px */
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        header .content .right .main .bottom .name {
+            width: 90%;
+        }
+        header .content .right .main .top .top-text {
+            font-size: 28px;
+        }
+        header .content .right .main .bottom .name .name-text {
+            width: 180px;
+            font-size: 30px;
+        }
+        #content-1 .cover,
+        #content-1 .intro,
+        .Profile,
+        #content-3 .skills,
+        #content-4 .protfolio {
+            max-width: 750px;
+        }
+        #content-1 .intro .like .box {
+            height: 240px;
+        }
+        #content-1 .intro .like .box .bottom {
+            height: 40px;
+            line-height: 40px;
+        }
+        #content-3 .skills .circle-wrapper .svg:after {
+            font-size: 1.2rem;
+        }
+    }
+    /* keyframes is Here↓ */
+
+    @keyframes bounceIn {
+        from,
+        20%,
+        40%,
+        60%,
+        80%,
+        to {
+            -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        }
+
+        0% {
+            opacity: 0;
+            -webkit-transform: scale3d(.3, .3, .3);
+            transform: scale3d(.3, .3, .3);
+        }
+
+        20% {
+            -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+
+        40% {
+            -webkit-transform: scale3d(.9, .9, .9);
+            transform: scale3d(.9, .9, .9);
+        }
+
+        60% {
+            opacity: 1;
+            -webkit-transform: scale3d(1.03, 1.03, 1.03);
+            transform: scale3d(1.03, 1.03, 1.03);
+        }
+
+        80% {
+            -webkit-transform: scale3d(.97, .97, .97);
+            transform: scale3d(.97, .97, .97);
+        }
+
+        to {
+            opacity: 1;
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    .bounceIn {
+        -webkit-animation-name: bounceIn;
+        animation-name: bounceIn;
+    }
+
+    @-webkit-keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+        }
+
+        to {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+
+    @keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+        }
+
+        to {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+
+    .fadeInLeft {
+        -webkit-animation-name: fadeInLeft;
+        animation-name: fadeInLeft;
+    }
+    /* keyframes is Here↑ */
+    </style>
+</head>
+
+<body>
+    <!-- header is Here↓ -->
+    <header>
+        <div class="content">
+            <div class="chief"></div>
+            <div class="left"></div>
+            <div class="right">
+                <div class="main">
+                    <div class="top">
+                        <div class="circle">
+                            <img src="images/myPic.png" alt="">
+                        </div>
+                        <div class="top-text">
+                            Hello !!
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="name">
+                            <div class="name-text">
+                                我是
+                                <span class="txt-rotate" data-period="2000" data-rotate='[ "黃ㄅㄛ ", "黃柏翰", "黃柏漢 !" ]'></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="clear"></div>
+        </div>
+    </header>
+    <!-- header is Here↑ -->
+    <!-- nav is Here↓ -->
+    <nav>
+        <!-- <div class="logo">
+            <img src="images/frog.svg" alt="">
+        </div> -->
+        <ul>
+            <li id="content-4-btn">Protfolio.</li>
+            <li id="content-3-btn">Skills.</li>
+            <li id="content-2-btn">Profile.</li>
+            <li id="content-1-btn">Intro.</li>
+        </ul>
+    </nav>
+    <!-- nav is Here↑ -->
+    <!-- main is Here↓ -->
+    <main>
+        <div id="content-1">
+            <div class="full">
+                <div class="cover"></div>
+                <div class="intro">
+                    <div class="title">Intro.</div>
+                    <div class="text">
+                        <p>Hello 我是 黃柏漢 ，目前是一名網頁設計師，過去曾做過業務、行銷人員以及餐飲業，在前年時候透過資策會的"UI/UX設計師"培訓課程完成一系列的學習，並在去年進入網頁設計師這個職場。</p>
+                        <br>
+                        <p>目前較為擅長的技術有：HTML、CSS與RWD以及JavaScript、JQuery與PhotoShop和Illustrator，因為會希望自己能在這一個領域裡，走的更為遙遠以及更為順利，所以現在也正在做自我技術能力上的增進(EX: Sass、Git、ASP.MVC)，也希望自己能有更多的接觸以及學習機會，讓自己在未來有能力成為全端人才。</p>
+                    </div>
+                    <div class="like">
+                        <div class="box box-1 bounceIn">
+                            <div class="top"></div>
+                            <div class="bottom">稍微貪吃</div>
+                        </div>
+                        <div class="box box-2 bounceIn">
+                            <div class="top"></div>
+                            <div class="bottom">偶爾創作</div>
+                        </div>
+                        <div class="box box-3 bounceIn">
+                            <div class="top"></div>
+                            <div class="bottom">少少閱讀</div>
+                        </div>
+                        <div class="box box-4 bounceIn">
+                            <div class="top"></div>
+                            <div class="bottom">常玩電腦</div>
+                        </div>
+                        <div id="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content-2">
+            <div class="Profile">
+                <div class="title circle">Profile.</div>
+                <div class="content">
+                    <div class="title">EXPERIENCE</div>
+                    <div class="row left circle">
+                        <div class="text">
+                            <div class="year">
+                                <span>2013 - Present</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row right">
+                        <div class="text">
+                            <h4>Samsung 台灣</h4>
+                            <h5>手機部門｜行銷專員</h5>
+                        </div>
+                    </div>
+                    <!-- ######### -->
+                    <div class="row left"></div>
+                    <div class="row right"></div>
+                    <!-- ######### -->
+                    <div class="row left circle">
+                        <div class="text">
+                            <div class="year">
+                                <span>2015 - Present</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row right">
+                        <div class="text">
+                            <h4>資策會｜培訓</h4>
+                            <h5>UI/UX設計師課程</h5>
+                        </div>
+                    </div>
+                    <!-- ######### -->
+                    <div class="row left circle"></div>
+                    <div class="row right"></div>
+                    <!-- ########## -->
+                    <div id="clear"></div>
+                    <div class="title circle">成為設計人</div>
+                    <!-- ######### -->
+                    <div class="row left circle">
+                        <div class="text">
+                            <div class="year">
+                                <span>2016 - Present</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row right">
+                        <div class="text">
+                            <h4>時尚美人(電商)</h4>
+                            <h5>平面｜網頁｜APP設計、官網維護</h5>
+                        </div>
+                    </div>
+                    <!-- ######### -->
+                    <div class="row left circle">
+                        <div class="text">
+                            <div class="year">
+                                <span>2016 - Present</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row right">
+                        <div class="text">
+                            <h4>聯成電腦(補教)</h4>
+                            <h5>平面｜網頁設計、官網維護</h5>
+                        </div>
+                    </div>
+                    <!-- ######### -->
+                    <div class="row left"></div>
+                    <div class="row right"></div>
+                    <!-- ######### -->
+                    <div class="row left"></div>
+                    <div class="row right"></div>
+                    <!-- ######### -->
+                    <div class="row left"></div>
+                    <div class="row right"></div>
+                    <!-- ######### -->
+                    <div class="row left"></div>
+                    <div class="row right"></div>
+                    <!-- ########## -->
+                    <div id="clear"></div>
+                    <div class="title">
+                        <a href="http://hanfour.droppages.com/aboutMe.png" style="color:#FFF;">
+                            下載 我的履歷
+                        </a>
+                    </div>
+                    <!-- ######### -->
+                    <div id="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div id="content-3">
+            <div class="skills">
+                <div class="title">Skills.</div>
+                <div class="circle-wrapper">
+                    <!--   put the progress value You want in (data-value) attribute -->
+                    <div class="svg svg1 col-50off" data-value="83" data-lang="HTML">
+                        <svg width="100%" viewBox="0 0 80 80">
+                            <path class="load-bg cir1" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"></path>
+                            <path id="load-line1" class="load-circle" style="stroke-dashoffset: 192.6168975830078px; stroke-dasharray: 192.6168975830078px;" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"></path>
+                        </svg>
+                    </div>
+                    <!-- change (data-value) attribute [2]-->
+                    <div class="svg svg2 col-50off" data-value="87" data-lang="CSS">
+                        <svg width="100%" viewBox="0 0 80 80">
+                            <path class="load-bg cir2" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"></path>
+                            <path id="load-line2" class="load-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z" style="stroke-dashoffset: 192.6168975830078px; stroke-dasharray: 192.6168975830078px;"></path>
+                        </svg>
+                    </div>
+                    <!-- change (data-value) attribute [3]-->
+                    <div class="svg svg3 col-50off" data-value="72" data-lang="Javascript">
+                        <svg width="100%" viewBox="0 0 80 80">
+                            <path class="load-bg cir3" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"></path>
+                            <path id="load-line3" class="load-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z" style="stroke-dashoffset: 192.6168975830078px; stroke-dasharray: 192.6168975830078px;"></path>
+                    </div>
+                    <!-- change (data-value) attribute [4]-->
+                    <div class="svg svg4 col-50off" data-value="76" data-lang="Design">
+                        </svg>
+                        <svg width="100%" viewBox="0 0 80 80">
+                            <path class="load-bg cir4" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"></path>
+                            <path id="load-line4" class="load-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z" style="stroke-dashoffset: 192.6168975830078px; stroke-dasharray: 192.6168975830078px;"></path>
+                        </svg>
+                    </div>
+                    <div id="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div id="content-4">
+            <div class="protfolio">
+                <div class="title">Protfolio.</div>
+                <div class="content">
+                    <div class="toolbar mb2 mt2">
+                        <button class="btn fil-cat" href="" data-rel="all">All</button>
+                        <button class="btn fil-cat" data-rel="web">網頁</button>
+                        <button class="btn fil-cat" data-rel="graphic">平面</button>
+                        <button class="btn fil-cat" data-rel="other">Other</button>
+                    </div>
+                    <div id="clear"></div>
+                    <div id="portfolio">
+                        <div class="tile scale-anm web all">
+                            <a href="https://www.abcgo.com.tw/commercial/ad/ad_06.asp">
+                                <img src="images/web/29058170074.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="tile scale-anm other all lightbox-gallery">
+                            <img src="images/other/29058170001.jpg" alt="" title="Logo設計" />
+                        </div>
+                        <div class="tile scale-anm web all">
+                            <a href="https://www.lccnet.com.tw/commercial/marketing/02/marketing02.asp">
+                                <img src="images/web/29058170050.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="tile scale-anm web all">
+                            <a href="http://www.lccnet.com.tw/commercial/cad/75/cad75_PTC.asp">
+                                <img src="images/web/29058170053.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="tile scale-anm web all">
+                            <a href="https://www.lccnet.com.tw/lccnet/game-developer?mpo=33990&utm_source=Lccnet_Ad&utm_medium=sitemap_set-class&utm_campaign=sitemap_set-class">
+                                <img src="images/web/29058170055.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="tile scale-anm graphic all lightbox-gallery">
+                            <img src="images/graphic/29058170003.gif" alt="" title="" />
+                        </div>
+                        <div class="tile scale-anm graphic all lightbox-gallery">
+                            <img src="images/graphic/29058170007.jpg" alt="" title="LCC官網手機板素材" />
+                        </div>
+                        <div class="tile scale-anm graphic all lightbox-gallery">
+                            <img src="images/graphic/29058170008.jpg" alt="" title="LCC官網手機板素材" />
+                        </div>
+                        <div class="tile scale-anm web all">
+                            <a href="http://www.lccnet.com.tw/commercial/event/174/event174.asp">
+                                <img src="images/web/29058170056.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="tile scale-anm web all">
+                            <a href="http://www.lccnet.com.tw/commercial/event/179/179_project.asp">
+                                <img src="images/web/29058170060.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="tile scale-anm web all">
+                            <a href="https://www.lccnet.com.tw/commercial/cad/77/cad77.asp">
+                                <img src="images/web/29058170063.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="tile scale-anm web all">
+                            <a href="https://www.abcgo.com.tw/commercial/ad/project/01/project01.asp">
+                                <img src="images/web/29058170064.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="tile scale-anm web all">
+                            <a href="https://www.abcgo.com.tw/commercial/ad/form.asp">
+                                <img src="images/web/29058170068.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="tile scale-anm graphic all lightbox-gallery">
+                            <img src="images/graphic/29058170015.gif" alt="" title="" />
+                        </div>
+                        <div class="tile scale-anm graphic all lightbox-gallery">
+                            <img src="images/graphic/29058170025.jpg" alt="" title="" />
+                        </div>
+                        <div class="tile scale-anm graphic all lightbox-gallery">
+                            <img src="images/graphic/29058170030.jpg" alt="" title="平面印刷：問券" />
+                        </div>
+                        <div class="tile scale-anm graphic all lightbox-gallery">
+                            <img src="images/graphic/29058170033.jpg" alt="" title="" />
+                        </div>
+                        <div class="tile scale-anm graphic all lightbox-gallery">
+                            <img src="images/graphic/29058170040 (1).jpg" alt="" title="平面印刷：三摺DM" />
+                        </div>
+                        <div class="tile scale-anm other all lightbox-gallery">
+                            <img src="images/other/29058170078.gif" alt="" title="APP設計" />
+                        </div>
+                    </div>
+                    <div id="clear"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- main is Here↑ -->
+    <footer>
+        <div class="my">
+            <h1>黃柏漢 Hanfour</h1>
+            <h2>
+                <a href="mailto:ux.hanfour@gmail.com">
+                    ux.hanfour@gmail.com
+                </a>
+            </h2>
+        </div>
+    </footer>
+    <!--  Nav moving  -->
+    <script>
+    $(document).ready(function() {
+        var navTop = $('nav').offset().top;
+        $(window).scroll(function() {
+            var scTop = $(window).scrollTop();
+            console.log(navTop, scTop);
+
+            if(scTop > navTop) {
+                $('nav').addClass('fixed');
+            } else {
+                $('nav').removeClass('fixed');
+            }
+        })
+    });
+    </script>
+    <!--  Nav Click moving  -->
+    <script>
+    $('#content-1-btn').click(function() {
+        $('html,body').animate({ scrollTop: $('#content-1').offset().top }, 800);
+        $('#content-1 .full .cover').animate({ marginLeft: '-100%' }, 2000);
+    });
+    $('#content-2-btn').click(function() {
+        $('html,body').animate({ scrollTop: $('#content-2').offset().top }, 800);
+    });
+    $('#content-3-btn').click(function() {
+        $('html,body').animate({ scrollTop: $('#content-3').offset().top }, 800);
+    });
+    $('#content-4-btn').click(function() {
+        $('html,body').animate({ scrollTop: $('#content-4').offset().top }, 800);
+    });
+    </script>
+    <!--  Name moving  -->
+    <script>
+    var TxtRotate = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtRotate.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if(this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+        var that = this;
+        var delta = 300 - Math.random() * 100;
+
+        if(this.isDeleting) { delta /= 2; }
+
+        if(!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+        } else if(this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+        }
+
+        setTimeout(function() {
+            that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('txt-rotate');
+        for(var i = 0; i < elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-rotate');
+            var period = elements[i].getAttribute('data-period');
+            if(toRotate) {
+                new TxtRotate(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+        document.body.appendChild(css);
+    };
+    </script>
+    <!--  Value moving  -->
+    <script>
+    window.addEventListener('load', function() {
+        var h, i;
+        var dataValues = [];
+        var svgs = document.querySelectorAll('.svg');
+        // get data values
+        for(i = 0; i < svgs.length; i++) {
+            dataValues.push(svgs[i].dataset["value"]);
+        }
+        // build the progress bar
+        function drawcircles(duration = '5s') {
+
+            var circlelines = document.querySelectorAll('.load-circle');
+
+            for(h = 0; h < circlelines.length; h++) {
+                var totalLength = circlelines[h].getTotalLength();
+                var offset = totalLength - ((dataValues[h] / 100) * totalLength);
+                circlelines[h].style.transitionDuration = duration;
+                circlelines[h].style.strokeDashoffset = offset + "px";
+            }
+        }
+
+        // release the progressbar to 0%
+
+        function releaseCircles() {
+            var circlelines = document.querySelectorAll('.load-circle');
+
+            for(h = 0; h < circlelines.length; h++) {
+                var totalLength = circlelines[h].getTotalLength();
+
+                circlelines[h].style.transitionDuration = '.5s';
+                circlelines[h].style.strokeDashoffset = totalLength + "px";
+
+            }
+        }
+
+        function updateValue() {
+            var svgs = document.querySelectorAll('.svg');
+
+            var circlelines = document.querySelectorAll('.load-circle');
+
+            for(h = 0; h < circlelines.length; h++) {
+                var totalLength = circlelines[h].getTotalLength();
+                var offset = totalLength - ((dataValues[h] / 100) * totalLength);
+                if(svgs[h].dataset["value"] !== offset) {
+                    svgs[h].dataset["value"] = parseInt((offset / totalLength) * 100);
+                }
+
+            }
+        }
+        // initializing
+        drawcircles();
+    })
+    </script>
+    <!--  Scroll in moving  -->
+    <script>
+    $(document).ready(function() {
+        function content1() {
+            wdth = $(window).width() * 2 + "px";
+            $('#content-1 .full').width(wdth);
+            margin = $(window).width() - $('#content-1 .cover').width();
+            $('#content-1 .full .cover').css({
+                "margin-left": margin / 2,
+                "margin-right": margin / 2
+            });
+            $('#content-1 .full .intro').css({
+                "margin-left": margin / 2,
+                "margin-right": margin / 2
+            });
+        }
+        content1();
+        $(window).resize(function() {
+            content1();
+        });
+    });
+
+    $(window).scroll(function() {
+        $('#content-1').each(function() {
+            var imagePos = $(this).offset().top;
+
+            var topOfWindow = $(window).scrollTop();
+            if(imagePos < topOfWindow + 0) {
+                $('#content-1 .full .cover').animate({ marginLeft: '-100%' }, 2000);
+            }
+        });
+    });
+    </script>
+    <!--  Portfolio Grid  -->
+    <script>
+    $(function() {
+        var selectedClass = "";
+        $(".fil-cat").click(function() {
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(100, 0.1);
+            $("#portfolio div").not("." + selectedClass).fadeOut().removeClass('scale-anm');
+            setTimeout(function() {
+                $("." + selectedClass).fadeIn().addClass('scale-anm');
+                $("#portfolio").fadeTo(300, 1);
+            }, 300);
+
+        });
+    });
+    </script>
+    <!--  Portfolio Lightbox  -->
+    <script>
+    (function() {
+        var $lightbox = $("<div class='lightbox'></div>");
+        var $img = $("<img>");
+        var $caption = $("<p class='caption'></p>");
+        // Add image and caption to lightbox
+        $lightbox
+            .append($img)
+            .append($caption);
+        // Add lighbox to document
+        $('body').append($lightbox);
+        $('.lightbox-gallery img').click(function(e) {
+            e.preventDefault();
+            // Get image link and description
+            var src = $(this).attr("src");
+            var cap = $(this).attr("title");
+            // Add data to lighbox
+            $img.attr('src', src);
+            $caption.text(cap);
+            // Show lightbox
+            $lightbox.fadeIn('fast');
+            $lightbox.click(function() {
+                $lightbox.fadeOut('fast');
+            });
+        });
+    }());
+    </script>
+</body>
+
+</html>
