@@ -947,7 +947,7 @@
         z-index: 999;
     }
     /* footer is Here↑ */
-    /* 768px > 1024px */
+    /* 768px -> 1024px */
 
     @media (min-width: 768px) and (max-width: 1024px) {
         header .content .right .main .bottom .name {
@@ -976,6 +976,90 @@
         }
         #content-3 .skills .circle-wrapper .svg:after {
             font-size: 1.2rem;
+        }
+    }
+    /* mobile */
+
+    @media screen and (max-width: 767px) {
+        header{
+            height: calc( 87vh - 60px);
+        }
+        header::before {
+            display: none;
+        }
+        header .content .chief {
+            min-width: 300px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 2;
+            height: calc( 87vh - 60px);
+            background-size: 300px auto;
+        }
+        header .content .left {
+            display: none;
+        }
+        header .content .right {
+            width: 100%;
+            height: calc( 87vh - 60px);
+            z-index: 3;
+        }
+        header .content .right .main {
+            width: calc( 100% - 20px);
+            height: 180px;
+            top: auto;
+            bottom: 10px;
+        }
+        header .content .right .main .top {
+            height: 100px;
+        }
+        header .content .right .main .top .circle {
+            display: none;
+        }
+        header .content .right .main .bottom {
+            width: calc( 100% - 20px);
+        }
+        header .content .right .main .bottom .name {
+            width: 100%;
+        }
+        nav ul li{
+            width: 25%;
+            padding: 0 0;
+            text-align: center;
+        }
+        #content-1 {
+            height: 1800px;
+        }
+        #content-1 .full {
+            height: 1700px;
+        }
+        #content-1 .cover,
+        #content-1 .intro {
+            min-width: 310px;
+            width: calc( 50% - 20px);
+            height: 1700px;
+        }
+        #content-1 .intro .like .box {
+            width: calc( 100% - 20px);
+            float: none;
+            color: #fff;
+        }
+        .Profile .content .row.right .text h4 {
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+        .Profile .content .row.right .text h5 {
+            line-height: 22px;
+        }
+        #content-3 .skills .circle-wrapper .svg{
+            margin: 10px auto;
+        }
+        #content-3 .skills .col-50off {
+            width: calc( 76% - 10px);
+            float: none;
+        }
+        #portfolio{
+            column-count: 2;
         }
     }
     /* keyframes is Here↓ */
